@@ -1,14 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\",
+  "WorkspaceRootPath": "C:\\Projetos\\API_Development\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\models\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\models\\hotelbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\hotelbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\models\\domain\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\domain\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\models\\domain\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\domain\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\projetos\\api_development\\api_development\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +38,96 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiContext.cs",
-              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Data\\ApiContext.cs",
-              "RelativeDocumentMoniker": "Api_Development\\Data\\ApiContext.cs",
-              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Data\\ApiContext.cs",
-              "RelativeToolTip": "Api_Development\\Data\\ApiContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Walk.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Walk.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Models\\Domain\\Walk.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Walk.cs",
+              "RelativeToolTip": "Api_Development\\Models\\Domain\\Walk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T13:57:07.555Z",
+              "WhenOpened": "2026-02-07T11:56:54.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Region.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Region.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Models\\Domain\\Region.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Region.cs",
+              "RelativeToolTip": "Api_Development\\Models\\Domain\\Region.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T11:55:16.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Difficulty.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Difficulty.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Models\\Domain\\Difficulty.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Domain\\Difficulty.cs",
+              "RelativeToolTip": "Api_Development\\Models\\Domain\\Difficulty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T11:53:44.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Entities\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Models\\Entities\\AppDbContext.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Models\\Entities\\AppDbContext.cs",
+              "RelativeToolTip": "Api_Development\\Models\\Entities\\AppDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T21:20:58.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HotelBooking.cs",
-              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\HotelBooking.cs",
-              "RelativeDocumentMoniker": "Api_Development\\Models\\HotelBooking.cs",
-              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\HotelBooking.cs",
-              "RelativeToolTip": "Api_Development\\Models\\HotelBooking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Program.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Program.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Program.cs",
+              "RelativeToolTip": "Api_Development\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T13:17:59.34Z",
+              "WhenOpened": "2026-02-06T18:58:34.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\appsettings.json",
+              "RelativeDocumentMoniker": "Api_Development\\appsettings.json",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\appsettings.json",
+              "RelativeToolTip": "Api_Development\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-06T18:51:01.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegionController.cs",
+              "DocumentMoniker": "C:\\Projetos\\API_Development\\Api_Development\\Controllers\\RegionController.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Controllers\\RegionController.cs",
+              "ToolTip": "C:\\Projetos\\API_Development\\Api_Development\\Controllers\\RegionController.cs",
+              "RelativeToolTip": "Api_Development\\Controllers\\RegionController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAEwDQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T19:05:03.877Z",
               "EditorCaption": ""
             }
           ]
