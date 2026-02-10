@@ -11,63 +11,31 @@ namespace Api_Development.Controllers
     {
         private readonly AppDbContext _context;
 
+        //Injecao do DBContext
         public RegionController(AppDbContext context)
         {
             _context = context;
         }
 
-        //[HttpPost]
-        //public IActionResult CreateRegion(Region region)
-        //{
-        //    if (booking.Id == 0)
-        //    {
-        //        // Inserção
-        //        _context..Add(booking);
-        //    }
-        //    else
-        //    {
-        //        // Edição
-        //        var bookingInDb = _context.Bookings.Find(booking.Id);
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var region = _context.Regions.ToList();
 
-        //        if (bookingInDb == null)
-        //            return NotFound(new { message = "Reserva não encontrada" });
+            return Ok(region);
+        }
 
-        //        // Esta é a forma correta de atualizar no EF Core sem mapear campo a campo
-        //        _context.Entry(bookingInDb).CurrentValues.SetValues(booking);
-        //    }
+        //Get A single region
+        [HttpGet]
+        [Route("id:Guid")]
+        public IActionResult GetById([FromRoute] Guid ID_Region)
+        {
+            var region = _context.Regions.Where(a=> a.Id == ID_Region);
 
-        //    _context.SaveChanges();
+            if(region == null)
+                return NotFound();
 
-        //    return Ok(booking);
-        //}
-
-
-        //[HttpGet]
-        //public IActionResult GetEdit(int Id)
-        //{
-        //    var result = _context.Bookings.Find(Id);
-
-        //    if (result == null)
-        //        return NotFound(new { message = "Reserva não encontrada" });
-
-        //    return new JsonResult(Ok(result));
-
-        //}
-
-        //[HttpDelete]
-
-        //public IActionResult DeleteBooking(int Id)
-        //{
-        //    var result = _context.Bookings.Find(Id);
-
-        //    if (result == null)
-        //        return NotFound(new { message = "Reserva não encontrada" });
-
-        //    _context.Bookings.Remove(result);
-        //    _context.SaveChanges();
-
-        //    return new JsonResult();
-        //}
-
+            return Ok(region);
+        }
     }
 }
