@@ -2,6 +2,7 @@
 using Api_Development.Models;
 using Api_Development.Models.Entities;
 using Api_Development.Models.Domain;
+using Api_Development.Models.DTOs;
 
 namespace Api_Development.Controllers
 {
@@ -11,63 +12,88 @@ namespace Api_Development.Controllers
     {
         private readonly AppDbContext _context;
 
+        //Injecao do DBContext
         public RegionController(AppDbContext context)
         {
             _context = context;
         }
 
-        //[HttpPost]
-        //public IActionResult CreateRegion(Region region)
-        //{
-        //    if (booking.Id == 0)
-        //    {
-        //        // Inserção
-        //        _context..Add(booking);
-        //    }
-        //    else
-        //    {
-        //        // Edição
-        //        var bookingInDb = _context.Bookings.Find(booking.Id);
+        [HttpGet]
+        public IActionResult GetAll()
+        {
 
-        //        if (bookingInDb == null)
-        //            return NotFound(new { message = "Reserva não encontrada" });
+            //Get Data From Database - Domain Models
+            var regionsDomain = _context.Regions.ToList();
 
-        //        // Esta é a forma correta de atualizar no EF Core sem mapear campo a campo
-        //        _context.Entry(bookingInDb).CurrentValues.SetValues(booking);
-        //    }
+            //Map Domain Models to DTOs
+            var regionsDto = new List<RegionDto>();
+            foreach (var regionDomain in regionsDomain)
+            {
+                var regionItemDto = new RegionDto()
+                {
+                    Id = regionDomain.Id,
+                    Code = regionDomain.Code,
+                    Name = regionDomain.Name,
+                    RegionImageUrl = regionDomain.RegionImageUrl
+                };
+                regionsDto.Add(regionItemDto);
+            }
 
-        //    _context.SaveChanges();
-
-        //    return Ok(booking);
-        //}
+            return Ok(regionsDto);
 
 
-        //[HttpGet]
-        //public IActionResult GetEdit(int Id)
-        //{
-        //    var result = _context.Bookings.Find(Id);
+        }
 
-        //    if (result == null)
-        //        return NotFound(new { message = "Reserva não encontrada" });
+        //Get A single region
+        [HttpGet]
+        [Route("ID_Region:Guid")]
+        public IActionResult GetById([FromRoute] Guid ID_Region)
+        {
 
-        //    return new JsonResult(Ok(result));
 
-        //}
+            var regionDomain = _context.Regions.Where(a => a.Id == ID_Region);
 
-        //[HttpDelete]
+            if (regionDomain == null)
+                return NotFound();
 
-        //public IActionResult DeleteBooking(int Id)
-        //{
-        //    var result = _context.Bookings.Find(Id);
+            //Map Domain Model to DTO
 
-        //    if (result == null)
-        //        return NotFound(new { message = "Reserva não encontrada" });
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomain.First().Id,
+                Code = regionDomain.First().Code,
+                Name = regionDomain.First().Name,
+                RegionImageUrl = regionDomain.First().RegionImageUrl
+            };
 
-        //    _context.Bookings.Remove(result);
-        //    _context.SaveChanges();
+            //retun Dto
+            return Ok(regionDto);
+        }
 
-        //    return new JsonResult();
-        //}
+        [HttpPost]
 
+        public IActionResult CreateRegion([FromBody] AddRegionRequestDto AddRegionDto)
+        {
+            //Map DTO to Domain Model
+            var regionDomain = new Region()
+            {
+                Id = Guid.NewGuid(),
+                Code = AddRegionDto.Code,
+                Name = AddRegionDto.Name,
+                RegionImageUrl = AddRegionDto.RegionImageUrl
+            };
+            //Save to Database
+            _context.Regions.Add(regionDomain);
+            _context.SaveChanges();
+            //Map Domain Model to DTO
+            var regionItemDto = new RegionDto()
+            {
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
+            };
+            return CreatedAtAction(nameof(GetById), new { ID_Region = regionItemDto.Id }, regionItemDto);
+        }
     }
 }
