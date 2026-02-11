@@ -3,6 +3,7 @@ using Api_Development.Models;
 using Api_Development.Models.Entities;
 using Api_Development.Models.Domain;
 using Api_Development.Models.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api_Development.Controllers
 {
@@ -19,11 +20,11 @@ namespace Api_Development.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
 
             //Get Data From Database - Domain Models
-            var regionsDomain = _context.Regions.ToList();
+             var regionsDomain = await _context.Regions.ToListAsync();
 
             //Map Domain Models to DTOs
             var regionsDto = new List<RegionDto>();
@@ -46,7 +47,7 @@ namespace Api_Development.Controllers
 
         //Get A single region
         [HttpGet]
-        [Route("ID_Region:Guid")]
+        [Route("{ID_Region:Guid}")]
         public IActionResult GetById([FromRoute] Guid ID_Region)
         {
 
@@ -93,7 +94,70 @@ namespace Api_Development.Controllers
                 Name = regionDomain.Name,
                 RegionImageUrl = regionDomain.RegionImageUrl
             };
+            //Dá 201 pois criar e envia o objecto
             return CreatedAtAction(nameof(GetById), new { ID_Region = regionItemDto.Id }, regionItemDto);
+        }
+
+
+        // Update Region 
+        // Put: https://localhost:portnumber/api/regions/{id}
+        [HttpPut]
+        [Route("{ID_Region:Guid}")]
+        public IActionResult UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+        {
+            var regionDomain = _context.Regions.FirstOrDefault(a => a.Id == ID_Region);
+            
+            if (regionDomain == null)
+                return NotFound();
+
+            //MapDto to Domain Model
+
+            regionDomain.Code = updateRegionRequestDto.Code;
+            regionDomain.Name = updateRegionRequestDto.Name;
+            regionDomain.RegionImageUrl = updateRegionRequestDto.RegionImageUrl;
+
+            _context.SaveChanges();
+
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
+
+            };
+
+            return Ok(regionDto);
+        }
+
+
+        //Delete Region
+        //Detele: https://localhost:portnumber/api/regions/{id}
+        [HttpDelete]
+        [Route("{ID_Region:Guid}")]
+
+        public IActionResult Delete([FromRoute] Guid ID_Region)
+        {
+           var regionDomain = _context.Regions.FirstOrDefault(x => x.Id == ID_Region);
+
+            if (regionDomain == null)
+                return NotFound();
+
+            _context.Regions.Remove(regionDomain);
+            _context.SaveChanges();
+
+            //return deleted Region Back
+            //map domain model to Dto
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
+
+            };
+
+            return Ok(regionDto);
         }
     }
 }

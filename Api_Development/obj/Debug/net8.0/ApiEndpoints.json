@@ -28,7 +28,7 @@
   {
     "ContainingType": "Api_Development.Controllers.RegionController",
     "Method": "GetById",
-    "RelativePath": "api/Region/ID_Region:Guid",
+    "RelativePath": "api/Region/{ID_Region}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -36,7 +36,28 @@
       {
         "Name": "ID_Region",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.RegionController",
+    "Method": "UpdateRegion",
+    "RelativePath": "api/Region/{ID_Region}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Region",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRegionRequestDto",
+        "Type": "Api_Development.Models.DTOs.UpdateRegionRequestDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -46,7 +46,7 @@
         }
       }
     },
-    "/api/Region/ID_Region:Guid": {
+    "/api/Region/{ID_Region}": {
       "get": {
         "tags": [
           "Region"
@@ -67,12 +67,70 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Region"
+        ],
+        "parameters": [
+          {
+            "name": "ID_Region",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRegionRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRegionRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRegionRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
   "components": {
     "schemas": {
       "AddRegionRequestDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRegionRequestDto": {
         "type": "object",
         "properties": {
           "code": {
