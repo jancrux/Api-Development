@@ -48,11 +48,9 @@ namespace Api_Development.Controllers
         //Get A single region
         [HttpGet]
         [Route("{ID_Region:Guid}")]
-        public IActionResult GetById([FromRoute] Guid ID_Region)
+        public async Task<IActionResult> GetById([FromRoute] Guid ID_Region)
         {
-
-
-            var regionDomain = _context.Regions.Where(a => a.Id == ID_Region);
+            var regionDomain = await _context.Regions.FirstOrDefaultAsync(a => a.Id == ID_Region);
 
             if (regionDomain == null)
                 return NotFound();
@@ -61,10 +59,10 @@ namespace Api_Development.Controllers
 
             var regionDto = new RegionDto()
             {
-                Id = regionDomain.First().Id,
-                Code = regionDomain.First().Code,
-                Name = regionDomain.First().Name,
-                RegionImageUrl = regionDomain.First().RegionImageUrl
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
             };
 
             //retun Dto
@@ -73,7 +71,7 @@ namespace Api_Development.Controllers
 
         [HttpPost]
 
-        public IActionResult CreateRegion([FromBody] AddRegionRequestDto AddRegionDto)
+        public async Task<IActionResult> CreateRegion([FromBody] AddRegionRequestDto AddRegionDto)
         {
             //Map DTO to Domain Model
             var regionDomain = new Region()
@@ -84,8 +82,8 @@ namespace Api_Development.Controllers
                 RegionImageUrl = AddRegionDto.RegionImageUrl
             };
             //Save to Database
-            _context.Regions.Add(regionDomain);
-            _context.SaveChanges();
+             await _context.Regions.AddAsync(regionDomain);
+             await _context.SaveChangesAsync();
             //Map Domain Model to DTO
             var regionItemDto = new RegionDto()
             {
@@ -103,9 +101,9 @@ namespace Api_Development.Controllers
         // Put: https://localhost:portnumber/api/regions/{id}
         [HttpPut]
         [Route("{ID_Region:Guid}")]
-        public IActionResult UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+        public async Task<IActionResult> UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
-            var regionDomain = _context.Regions.FirstOrDefault(a => a.Id == ID_Region);
+            var regionDomain = await _context.Regions.FirstOrDefaultAsync(a => a.Id == ID_Region);
             
             if (regionDomain == null)
                 return NotFound();
@@ -116,7 +114,7 @@ namespace Api_Development.Controllers
             regionDomain.Name = updateRegionRequestDto.Name;
             regionDomain.RegionImageUrl = updateRegionRequestDto.RegionImageUrl;
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             var regionDto = new RegionDto()
             {
@@ -136,15 +134,15 @@ namespace Api_Development.Controllers
         [HttpDelete]
         [Route("{ID_Region:Guid}")]
 
-        public IActionResult Delete([FromRoute] Guid ID_Region)
+        public async Task<IActionResult> Delete([FromRoute] Guid ID_Region)
         {
-           var regionDomain = _context.Regions.FirstOrDefault(x => x.Id == ID_Region);
+           var regionDomain = await _context.Regions.FirstOrDefaultAsync(x => x.Id == ID_Region);
 
             if (regionDomain == null)
                 return NotFound();
 
-            _context.Regions.Remove(regionDomain);
-            _context.SaveChanges();
+           _context.Regions.Remove(regionDomain);
+           await _context.SaveChangesAsync();
 
             //return deleted Region Back
             //map domain model to Dto
