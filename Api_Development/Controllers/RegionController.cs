@@ -6,6 +6,7 @@ using Api_Development.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using Api_Development.Repositories;
 using Api_Development.Repositories.Interfaces;
+using AutoMapper;
 
 namespace Api_Development.Controllers
 {
@@ -15,12 +16,14 @@ namespace Api_Development.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IRegionRepository regionRepository;
+        private readonly IMapper mapper;
 
-        //Injecao do DBContext
-        public RegionController(AppDbContext context, IRegionRepository regionRepository)
+        //Injecao do DBContext/Repositorio/Mapper
+        public RegionController(AppDbContext context, IRegionRepository regionRepository, IMapper mapper)
         {
             _context = context;
             this.regionRepository = regionRepository;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -45,10 +48,7 @@ namespace Api_Development.Controllers
                 };
                 regionsDto.Add(regionItemDto);
             }
-
             return Ok(regionsDto);
-
-
         }
 
         //Get A single region
