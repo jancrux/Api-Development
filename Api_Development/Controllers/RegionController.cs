@@ -27,27 +27,34 @@ namespace Api_Development.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllAsync()
         {
-
+            #region Without Repository
             //Get Data From Database - Domain Models
-             //var regionsDomain = await _context.Regions.ToListAsync();
+            //var regionsDomain = await _context.Regions.ToListAsync();
+            #endregion
 
             var regionsDomain = await regionRepository.GetAllAsync();
 
-            //Map Domain Models to DTOs
-            var regionsDto = new List<RegionDto>();
-            foreach (var regionDomain in regionsDomain)
-            {
-                var regionItemDto = new RegionDto()
-                {
-                    Id = regionDomain.Id,
-                    Code = regionDomain.Code,
-                    Name = regionDomain.Name,
-                    RegionImageUrl = regionDomain.RegionImageUrl
-                };
-                regionsDto.Add(regionItemDto);
-            }
+            #region Mapper Manual
+            ////Map Domain Models to DTOs
+            //var regionsDto = new List<RegionDto>();
+            //foreach (var regionDomain in regionsDomain)
+            //{
+            //    var regionItemDto = new RegionDto()
+            //    {
+            //        Id = regionDomain.Id,
+            //        Code = regionDomain.Code,
+            //        Name = regionDomain.Name,
+            //        RegionImageUrl = regionDomain.RegionImageUrl
+            //    };
+            //    regionsDto.Add(regionItemDto);
+            //}
+            #endregion
+
+            //Map Domain Models to DTOs using AutoMapper
+            var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+
             return Ok(regionsDto);
         }
 
@@ -63,15 +70,19 @@ namespace Api_Development.Controllers
             if (regionDomain == null)
                 return NotFound();
 
+            #region Mapper Manual
             //Map Domain Model to DTO
 
-            var regionDto = new RegionDto()
-            {
-                Id = regionDomain.Id,
-                Code = regionDomain.Code,
-                Name = regionDomain.Name,
-                RegionImageUrl = regionDomain.RegionImageUrl
-            };
+            //var regionDto = new RegionDto()
+            //{
+            //    Id = regionDomain.Id,
+            //    Code = regionDomain.Code,
+            //    Name = regionDomain.Name,
+            //    RegionImageUrl = regionDomain.RegionImageUrl
+            //};
+            #endregion
+            
+            var regionDto = mapper.Map<RegionDto>(regionDomain);
 
             //retun Dto
             return Ok(regionDto);
@@ -122,7 +133,7 @@ namespace Api_Development.Controllers
             {
                 Code = updateRegionRequestDto.Code,
                 Name = updateRegionRequestDto.Name,
-                RegionImageUrl= updateRegionRequestDto.RegionImageUrl
+                RegionImageUrl = updateRegionRequestDto.RegionImageUrl
 
             };
 
@@ -160,7 +171,7 @@ namespace Api_Development.Controllers
         [Route("{ID_Region:Guid}")]
         public async Task<IActionResult> Delete([FromRoute] Guid ID_Region)
         {
-           var regionDomain = await regionRepository.DeleteAsync(ID_Region);
+            var regionDomain = await regionRepository.DeleteAsync(ID_Region);
 
             if (regionDomain == null)
                 return NotFound();

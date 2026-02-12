@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Api_Development.Controllers.RegionController",
-    "Method": "GetAll",
+    "Method": "GetAllAsync",
     "RelativePath": "api/Region",
     "HttpMethod": "GET",
     "IsController": true,
