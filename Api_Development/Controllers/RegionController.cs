@@ -28,7 +28,9 @@ namespace Api_Development.Controllers
         {
 
             //Get Data From Database - Domain Models
-             var regionsDomain = await _context.Regions.ToListAsync();
+             //var regionsDomain = await _context.Regions.ToListAsync();
+
+            var regionsDomain = await regionRepository.GetAllAsync();
 
             //Map Domain Models to DTOs
             var regionsDto = new List<RegionDto>();
