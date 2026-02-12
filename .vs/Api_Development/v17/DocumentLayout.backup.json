@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\repositories\\regionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\repositories\\regionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\repositories\\interfaces\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\repositories\\interfaces\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\models\\dtos\\updateregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,14 +35,6 @@
       "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\migrations\\20260209210141_initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\models\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\models\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|c:\\users\\jcruz\\documents\\ambientetrabalho\\meus\\apidevelopment\\api_development\\api_development\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EA744C78-E5FD-4C25-BE01-09044FC65D8B}|Api_Development\\Api_Development.csproj|solutionrelative:api_development\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -38,11 +46,63 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Mappings\\AutoMapperProfiles.cs",
+              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "Api_Development\\Mappings\\AutoMapperProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T13:30:03.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Repositories\\RegionRepository.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Repositories\\RegionRepository.cs",
+              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Repositories\\RegionRepository.cs",
+              "RelativeToolTip": "Api_Development\\Repositories\\RegionRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T09:35:41.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRegionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Repositories\\Interfaces\\IRegionRepository.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Repositories\\Interfaces\\IRegionRepository.cs",
+              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Repositories\\Interfaces\\IRegionRepository.cs",
+              "RelativeToolTip": "Api_Development\\Repositories\\Interfaces\\IRegionRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawBAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:36:44.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegionController.cs",
+              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Controllers\\RegionController.cs",
+              "RelativeDocumentMoniker": "Api_Development\\Controllers\\RegionController.cs",
+              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Controllers\\RegionController.cs",
+              "RelativeToolTip": "Api_Development\\Controllers\\RegionController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAwwF0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T21:38:00.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UpdateRegionRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\DTOs\\UpdateRegionRequestDto.cs",
               "RelativeDocumentMoniker": "Api_Development\\Models\\DTOs\\UpdateRegionRequestDto.cs",
@@ -55,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "RegionDto.cs",
               "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\DTOs\\RegionDto.cs",
               "RelativeDocumentMoniker": "Api_Development\\Models\\DTOs\\RegionDto.cs",
@@ -68,20 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegionController.cs",
-              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Controllers\\RegionController.cs",
-              "RelativeDocumentMoniker": "Api_Development\\Controllers\\RegionController.cs",
-              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Controllers\\RegionController.cs",
-              "RelativeToolTip": "Api_Development\\Controllers\\RegionController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T21:38:00.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "20260209210141_Initial Migration.cs",
               "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Migrations\\20260209210141_Initial Migration.cs",
               "RelativeDocumentMoniker": "Api_Development\\Migrations\\20260209210141_Initial Migration.cs",
@@ -89,35 +136,25 @@
               "RelativeToolTip": "Api_Development\\Migrations\\20260209210141_Initial Migration.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T21:01:42.335Z"
+              "WhenOpened": "2026-02-09T21:01:42.335Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\Entities\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Api_Development\\Models\\Entities\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Models\\Entities\\AppDbContext.cs",
-              "RelativeToolTip": "Api_Development\\Models\\Entities\\AppDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T21:20:58.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Program.cs",
               "RelativeDocumentMoniker": "Api_Development\\Program.cs",
-              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Program.cs",
-              "RelativeToolTip": "Api_Development\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\Program.cs*",
+              "RelativeToolTip": "Api_Development\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T18:58:34.875Z"
+              "WhenOpened": "2026-02-06T18:58:34.875Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\jcruz\\Documents\\AmbienteTrabalho\\Meus\\ApiDevelopment\\Api_Development\\Api_Development\\appsettings.json",
               "RelativeDocumentMoniker": "Api_Development\\appsettings.json",
@@ -125,7 +162,8 @@
               "RelativeToolTip": "Api_Development\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-06T18:51:01.492Z"
+              "WhenOpened": "2026-02-06T18:51:01.492Z",
+              "EditorCaption": ""
             }
           ]
         }

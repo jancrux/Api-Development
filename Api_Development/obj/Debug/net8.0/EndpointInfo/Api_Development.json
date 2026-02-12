@@ -107,6 +107,27 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "Region"
+        ],
+        "parameters": [
+          {
+            "name": "ID_Region",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },

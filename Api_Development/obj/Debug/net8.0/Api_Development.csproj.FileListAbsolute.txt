@@ -275,3 +275,9 @@ C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Ap
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\Api_Development.pdb
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\Api_Development.genruntimeconfig.cache
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\ref\Api_Development.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll

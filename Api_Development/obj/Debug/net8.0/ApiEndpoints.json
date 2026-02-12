@@ -61,5 +61,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.RegionController",
+    "Method": "Delete",
+    "RelativePath": "api/Region/{ID_Region}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Region",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

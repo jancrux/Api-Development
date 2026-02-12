@@ -1,6 +1,10 @@
+using Api_Development.Mappings;
 using Api_Development.Models;
 using Api_Development.Models.Entities;
+using Api_Development.Repositories;
+using Api_Development.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +16,10 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
 
+builder.Services.AddScoped<IRegionRepository, RegionRepository>();
+
+//Tive que colocar o .Assembly Caso Contrário não dava
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
