@@ -77,5 +77,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.WalksController",
+    "Method": "Create",
+    "RelativePath": "api/Walks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addWalkRequestDto",
+        "Type": "Api_Development.Models.DTOs.AddWalkRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
