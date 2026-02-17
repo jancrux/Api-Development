@@ -126,12 +126,6 @@ C:\Projetos\API_\Api_Development\obj\Debug\net8.0\scopedcss\bundle\Api_Developme
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.build.json
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.development.json
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets\msbuild.Api_Development.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets\msbuild.Api_Development.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets\msbuild.build.Api_Development.props
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Api_Development.props
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Api_Development.props
-C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\Api_Deve.C3702961.Up2Date
 C:\Projetos\API_\Api_Development\obj\Debug\net8.0\Api_Development.dll
@@ -279,3 +273,9 @@ C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Ap
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\Api_Development.pdb
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\Api_Development.genruntimeconfig.cache
 C:\Users\jcruz\Documents\AmbienteTrabalho\Meus\ApiDevelopment\Api_Development\Api_Development\obj\Debug\net8.0\ref\Api_Development.dll
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Projetos\API_\Api_Development\obj\Debug\net8.0\swae.build.ex.cache

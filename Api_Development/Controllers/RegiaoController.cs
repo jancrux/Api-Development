@@ -12,14 +12,14 @@ namespace Api_Development.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegionController : ControllerBase
+    public class RegiaoController : ControllerBase
     {
         private readonly AppDbContext _context;
-        private readonly IRegionRepository regionRepository;
+        private readonly IRegiaoRepository regionRepository;
         private readonly IMapper mapper;
 
         //Injecao do DBContext/Repositorio/Mapper
-        public RegionController(AppDbContext context, IRegionRepository regionRepository, IMapper mapper)
+        public RegiaoController(AppDbContext context, IRegiaoRepository regionRepository, IMapper mapper)
         {
             _context = context;
             this.regionRepository = regionRepository;
@@ -53,7 +53,7 @@ namespace Api_Development.Controllers
             #endregion
 
             //Map Domain Models to DTOs using AutoMapper
-            var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+            var regionsDto = mapper.Map<List<RegiaoDto>>(regionsDomain);
 
             return Ok(regionsDto);
         }
@@ -82,14 +82,14 @@ namespace Api_Development.Controllers
             //};
             #endregion
             
-            var regionDto = mapper.Map<RegionDto>(regionDomain);
+            var regionDto = mapper.Map<RegiaoDto>(regionDomain);
 
             //retun Dto
             return Ok(regionDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRegion([FromBody] AddRegionRequestDto AddRegionDto)
+        public async Task<IActionResult> CreateRegion([FromBody] AddRegiaoRequestDto AddRegionDto)
         {
             #region Forma Inicial
             //Map DTO to Domain Model
@@ -106,8 +106,8 @@ namespace Api_Development.Controllers
 
             #endregion
 
-            var regionDomain = mapper.Map<Region>(AddRegionDto);
-            await regionRepository.CreateRegionAsync(regionDomain);
+            var regionDomain = mapper.Map<Regiao>(AddRegionDto);
+            await regionRepository.CreateRegiaoAsync(regionDomain);
 
             #region Forma Inicial
             ////Map Domain Model to DTO
@@ -120,17 +120,17 @@ namespace Api_Development.Controllers
             //};
             #endregion
 
-            var regionItemDto = mapper.Map<RegionDto>(regionDomain);
+            var regionItemDto = mapper.Map<RegiaoDto>(regionDomain);
 
             //Dá 201 pois criar e envia o objecto
-            return CreatedAtAction(nameof(GetById), new { ID_Region = regionItemDto.Id }, regionItemDto);
+            return CreatedAtAction(nameof(GetById), new { ID_Region = regionItemDto.RegiaoId }, regionItemDto);
         }
 
         // Update Region 
         // Put: https://localhost:portnumber/api/regions/{id}
         [HttpPut]
         [Route("{ID_Region:Guid}")]
-        public async Task<IActionResult> UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+        public async Task<IActionResult> UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegiaoRequestDto updateRegionRequestDto)
         {
 
             #region Forma Inicial
@@ -148,9 +148,9 @@ namespace Api_Development.Controllers
             //var regionDomain = await _context.Regions.FirstOrDefaultAsync(a => a.Id == ID_Region);
             #endregion
 
-            var regionDomain = mapper.Map<Region>(updateRegionRequestDto);
+            var regionDomain = mapper.Map<Regiao>(updateRegionRequestDto);
 
-            regionDomain = await regionRepository.UpdateRegionAsync(ID_Region, regionDomain);
+            regionDomain = await regionRepository.UpdateRegiaoAsync(ID_Region, regionDomain);
 
             if (regionDomain == null)
                 return NotFound();
@@ -166,7 +166,7 @@ namespace Api_Development.Controllers
             //};
             #endregion
 
-            var regionDto = mapper.Map<RegionDto>(regionDomain);
+            var regionDto = mapper.Map<RegiaoDto>(regionDomain);
 
             return Ok(regionDto);
         }
@@ -195,7 +195,7 @@ namespace Api_Development.Controllers
             //};
             #endregion
 
-            var regionDto = mapper.Map<RegionDto>(regionDomain);
+            var regionDto = mapper.Map<RegiaoDto>(regionDomain);
 
             return Ok(regionDto);
         }

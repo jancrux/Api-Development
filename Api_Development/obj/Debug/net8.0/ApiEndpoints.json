@@ -1,8 +1,24 @@
 [
   {
-    "ContainingType": "Api_Development.Controllers.RegionController",
-    "Method": "GetAllAsync",
-    "RelativePath": "api/Region",
+    "ContainingType": "Api_Development.Controllers.CaminhadaController",
+    "Method": "Create",
+    "RelativePath": "api/Caminhada",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addWalkRequestDto",
+        "Type": "Api_Development.Models.DTOs.AddCaminhadaRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.CaminhadaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Caminhada",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,25 +26,167 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api_Development.Controllers.RegionController",
-    "Method": "CreateRegion",
-    "RelativePath": "api/Region",
-    "HttpMethod": "POST",
+    "ContainingType": "Api_Development.Controllers.CaminhadaController",
+    "Method": "Update",
+    "RelativePath": "api/Caminhada/{caminhaId}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "AddRegionDto",
-        "Type": "Api_Development.Models.DTOs.AddRegionRequestDto",
+        "Name": "caminhaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateCaminhadaRequestDto",
+        "Type": "Api_Development.Models.DTOs.UpdateCaminhadaRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api_Development.Controllers.RegionController",
+    "ContainingType": "Api_Development.Controllers.CaminhadaController",
     "Method": "GetById",
-    "RelativePath": "api/Region/{ID_Region}",
+    "RelativePath": "api/Caminhada/{walkId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "walkId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.CaminhadaController",
+    "Method": "Delete",
+    "RelativePath": "api/Caminhada/{walkId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "walkId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.DificuldadeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Dificuldade",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.DificuldadeController",
+    "Method": "Create",
+    "RelativePath": "api/Dificuldade",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addDificuldadeRequestDto",
+        "Type": "Api_Development.Models.DTOs.AddDificuldadeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.DificuldadeController",
+    "Method": "Update",
+    "RelativePath": "api/Dificuldade",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Dificuldade",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateDificuldadeRequestDto",
+        "Type": "Api_Development.Models.DTOs.UpdateDificuldadeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.DificuldadeController",
+    "Method": "GetById",
+    "RelativePath": "api/Dificuldade/{ID_Dificuldade}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Dificuldade",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.DificuldadeController",
+    "Method": "Delete",
+    "RelativePath": "api/Dificuldade/{ID_Dificuldade}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Dificuldade",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.RegiaoController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Regiao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.RegiaoController",
+    "Method": "CreateRegion",
+    "RelativePath": "api/Regiao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AddRegionDto",
+        "Type": "Api_Development.Models.DTOs.AddRegiaoRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Development.Controllers.RegiaoController",
+    "Method": "GetById",
+    "RelativePath": "api/Regiao/{ID_Region}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +200,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api_Development.Controllers.RegionController",
+    "ContainingType": "Api_Development.Controllers.RegiaoController",
     "Method": "UpdateRegion",
-    "RelativePath": "api/Region/{ID_Region}",
+    "RelativePath": "api/Regiao/{ID_Region}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -56,16 +214,16 @@
       },
       {
         "Name": "updateRegionRequestDto",
-        "Type": "Api_Development.Models.DTOs.UpdateRegionRequestDto",
+        "Type": "Api_Development.Models.DTOs.UpdateRegiaoRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Api_Development.Controllers.RegionController",
+    "ContainingType": "Api_Development.Controllers.RegiaoController",
     "Method": "Delete",
-    "RelativePath": "api/Region/{ID_Region}",
+    "RelativePath": "api/Regiao/{ID_Region}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -73,22 +231,6 @@
       {
         "Name": "ID_Region",
         "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Development.Controllers.WalksController",
-    "Method": "Create",
-    "RelativePath": "api/Walks",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "addWalkRequestDto",
-        "Type": "Api_Development.Models.DTOs.AddWalkRequestDto",
         "IsRequired": true
       }
     ],

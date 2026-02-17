@@ -16,8 +16,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
 
-builder.Services.AddScoped<IRegionRepository, RegionRepository>();
-builder.Services.AddScoped<IWalkRepository, WalkRepository>();
+builder.Services.AddScoped<IRegiaoRepository, RegiaoRepository>();
+builder.Services.AddScoped<ICaminhadaRepository, CaminhadaRepository>();
+builder.Services.AddScoped<IDificuldadeRepository, DificuldadeRepository>();
 
 //Tive que colocar o .Assembly Caso Contrário não dava
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);

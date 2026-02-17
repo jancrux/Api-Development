@@ -8,12 +8,15 @@ namespace Api_Development.Mappings
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Region, RegionDto>().ReverseMap();
-            CreateMap<AddRegionRequestDto, Region>().ReverseMap();
-            CreateMap<UpdateRegionRequestDto, Region>().ReverseMap();
-            CreateMap<AddWalkRequestDto, Walk>().ReverseMap();
-            CreateMap<Walk, WalkDto>().ReverseMap();
-
+            CreateMap<Regiao, RegiaoDto>().ReverseMap();
+            CreateMap<AddRegiaoRequestDto, Regiao>().ReverseMap();
+            CreateMap<UpdateRegiaoRequestDto, Regiao>().ReverseMap();
+            CreateMap<AddCaminhadaRequestDto, Caminhada>().ReverseMap();
+            CreateMap<Caminhada, CaminhadaDto>().ReverseMap();
+            CreateMap<UpdateCaminhadaRequestDto, Caminhada>().ReverseMap();
+            CreateMap<Dificuldade, DificuldadeDto>().ReverseMap();
+            CreateMap<UpdateDificuldadeRequestDto, Dificuldade>().ReverseMap();
+            CreateMap<AddDificuldadeRequestDto, Dificuldade>().ReverseMap();
         }
     }
 }
