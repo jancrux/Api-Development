@@ -37,11 +37,37 @@ namespace Api_Development.Repositories
             await dbContext.SaveChangesAsync();
             return caminhadaModel;
         }
-        public async Task<List<Caminhada>> GetAllAsync()
+        public async Task<List<Caminhada>> GetAllAsync(string? filterOn = null, string? filterQuery = null, string? sortBy = null, bool isAcending = true)
         {
-            var caminhadas = await dbContext.Caminhadas.ToListAsync();
+            var caminhadas = dbContext.Caminhadas.Include("Dificuldade").Include("Regiao").AsQueryable();
 
-            return caminhadas;
+            //var caminhadas = await dbContext.Caminhadas.Include("Dificuldade").Include("Regiao").ToListAsync();
+
+            //Filter
+            if (!string.IsNullOrEmpty(filterOn) && !string.IsNullOrEmpty(filterQuery))
+            {
+                if (filterOn.Equals("Nome", StringComparison.OrdinalIgnoreCase))
+                {
+                    caminhadas = caminhadas.Where(a => a.Nome.Contains(filterQuery));
+                }
+            }
+
+            // Sorting
+
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                if (filterOn.Equals("Nome", StringComparison.OrdinalIgnoreCase))
+                {
+                    caminhadas = isAcending ?  caminhadas.OrderBy(a => a.Nome) : caminhadas.OrderByDescending(a => a.Nome);
+                }
+
+                if (filterOn.Equals("DistanciaKm", StringComparison.OrdinalIgnoreCase))
+                {
+                    caminhadas = isAcending ? caminhadas.OrderBy(a => a.DistanciaKm) : caminhadas.OrderByDescending(a => a.DistanciaKm);
+                }
+            }
+
+            return await caminhadas.ToListAsync();
         }
         public async Task<Caminhada?> GetByIdAsync(Guid id)
         {

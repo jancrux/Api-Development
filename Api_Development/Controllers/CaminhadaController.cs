@@ -1,4 +1,5 @@
-﻿using Api_Development.Models.Domain;
+﻿using Api_Development.CustomActionFilters;
+using Api_Development.Models.Domain;
 using Api_Development.Models.DTOs;
 using Api_Development.Repositories.Interfaces;
 using AutoMapper;
@@ -28,6 +29,7 @@ namespace Api_Development.Controllers
         //Create Walk
         //Post: /api/walks
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddCaminhadaRequestDto addWalkRequestDto)
         {
             var walkDomianModel = mapper.Map<Caminhada>(addWalkRequestDto);
@@ -40,11 +42,12 @@ namespace Api_Development.Controllers
         }
 
         //Get All Walks
-        //Get: /api/walks
+        //Get: /api/walks?filterOn=Name&filterQuery=Track
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
+            [FromQuery] string? sortBy, [FromQuery] bool? isAscending)
         {
-            var walksDomainModel = await caminhadaRepository.GetAllAsync();
+            var walksDomainModel = await caminhadaRepository.GetAllAsync(filterOn, filterQuery, sortBy, isAscending ?? true);
             return Ok(mapper.Map<List<CaminhadaDto>>(walksDomainModel));
         }
 
@@ -71,7 +74,6 @@ namespace Api_Development.Controllers
 
         [HttpDelete]
         [Route("{walkId:guid}")]
-
         public async Task<ActionResult> Delete(Guid walkId)
         {
             var walkDomainModel = await caminhadaRepository.DeleteAsync(walkId);
@@ -86,7 +88,7 @@ namespace Api_Development.Controllers
 
         [HttpPut]
         [Route("{caminhaId:Guid}")]
-
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid caminhaId, [FromBody] UpdateCaminhadaRequestDto updateCaminhadaRequestDto)
         {
             var caminhadaDomainModel = mapper.Map<Caminhada>(updateCaminhadaRequestDto);

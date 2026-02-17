@@ -22,7 +22,28 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "filterOn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isAscending",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -106,20 +127,15 @@
   },
   {
     "ContainingType": "Api_Development.Controllers.DificuldadeController",
-    "Method": "Update",
-    "RelativePath": "api/Dificuldade",
-    "HttpMethod": "PUT",
+    "Method": "GetById",
+    "RelativePath": "api/Dificuldade/{DificuldadeId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ID_Dificuldade",
+        "Name": "DificuldadeId",
         "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "updateDificuldadeRequestDto",
-        "Type": "Api_Development.Models.DTOs.UpdateDificuldadeRequestDto",
         "IsRequired": true
       }
     ],
@@ -127,15 +143,20 @@
   },
   {
     "ContainingType": "Api_Development.Controllers.DificuldadeController",
-    "Method": "GetById",
-    "RelativePath": "api/Dificuldade/{ID_Dificuldade}",
-    "HttpMethod": "GET",
+    "Method": "Update",
+    "RelativePath": "api/Dificuldade/{DificuldadeId}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ID_Dificuldade",
+        "Name": "DificuldadeId",
         "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDificuldadeRequestDto",
+        "Type": "Api_Development.Models.DTOs.UpdateDificuldadeRequestDto",
         "IsRequired": true
       }
     ],

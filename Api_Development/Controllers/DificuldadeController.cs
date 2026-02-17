@@ -1,4 +1,5 @@
-﻿using Api_Development.Models.Domain;
+﻿using Api_Development.CustomActionFilters;
+using Api_Development.Models.Domain;
 using Api_Development.Models.DTOs;
 using Api_Development.Repositories.Interfaces;
 using AutoMapper;
@@ -52,6 +53,7 @@ namespace Api_Development.Controllers
         // Post: /api/dificuldades
 
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddDificuldadeRequestDto addDificuldadeRequestDto)
         {
             var dificuldadeDomainModel = mapper.Map<Dificuldade>(addDificuldadeRequestDto);
@@ -67,6 +69,7 @@ namespace Api_Development.Controllers
         [HttpPut]
 
         [Route("{DificuldadeId:Guid}")]
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid DificuldadeId, [FromBody] UpdateDificuldadeRequestDto updateDificuldadeRequestDto)
         {
             var dificuldadeDomainModel = mapper.Map<Dificuldade>(updateDificuldadeRequestDto);

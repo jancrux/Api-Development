@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Api_Development.CustomActionFilters;
 using Api_Development.Models;
-using Api_Development.Models.Entities;
 using Api_Development.Models.Domain;
 using Api_Development.Models.DTOs;
-using Microsoft.EntityFrameworkCore;
+using Api_Development.Models.Entities;
 using Api_Development.Repositories;
 using Api_Development.Repositories.Interfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api_Development.Controllers
 {
@@ -89,6 +90,7 @@ namespace Api_Development.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> CreateRegion([FromBody] AddRegiaoRequestDto AddRegionDto)
         {
             #region Forma Inicial
@@ -130,6 +132,7 @@ namespace Api_Development.Controllers
         // Put: https://localhost:portnumber/api/regions/{id}
         [HttpPut]
         [Route("{ID_Region:Guid}")]
+        [ValidateModel]
         public async Task<IActionResult> UpdateRegion([FromRoute] Guid ID_Region, [FromBody] UpdateRegiaoRequestDto updateRegionRequestDto)
         {
 
